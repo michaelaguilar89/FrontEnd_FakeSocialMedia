@@ -5,8 +5,8 @@ import { InsertPostComponent } from './insert-post/insert-post.component';
 
 const routes: Routes = [
   {path:'getPost',component:GetPostComponent},
-  {path:'new-Post',component:InsertPostComponent},
-  {path:'update-Post',component:InsertPostComponent},
+  {path:'newPost',component:InsertPostComponent},
+  {path:'updatePost',component:InsertPostComponent},
 ];
 
 @NgModule({
