@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Observable} from 'rxjs';
+import { post } from '../models/post';
+import { ServicePostService } from '../services/service-post.service';
 
 @Component({
   selector: 'app-get-post',
@@ -7,4 +11,13 @@ import { Component } from '@angular/core';
 })
 export class GetPostComponent {
 
+ 
+  constructor(public service:ServicePostService){
+
+
+  }
+
+  ngOnInit():void{
+    this.service.getPost();
+  }
 }

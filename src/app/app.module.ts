@@ -7,6 +7,9 @@ import { GetPostComponent } from './get-post/get-post.component';
 import { InsertPostComponent } from './insert-post/insert-post.component';
 import { HeaderComponent } from './header/header.component';
 
+import{ HttpClientModule} from '@angular/common/http';
+import { ServicePostService } from './services/service-post.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +19,10 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServicePostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

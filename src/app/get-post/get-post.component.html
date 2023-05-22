@@ -1,14 +1,17 @@
 <div class="container">
-    <div class="col mx-auto tex-center">
-        <div class="row lg-10">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="row ">
+        <div class="col-md-8 mx-auto p-5" *ngFor="let post of service.myPost">
+            <div class="card" >
+                  <div class="card-body">
+                  <h5 class="card-title">New post by {{post.UserName}}</h5>
+                  <p class="card-text">{{post.Message}}
+                  </p>
+
+                  <img [src]="post.Url" class="rounded mx-auto d-block"  height="150px" width="150px">
+             
                   <a href="#" class="btn btn-primary">Go somewhere</a>
+
                 </div>
               </div>
-        </div>
     </div>
 </div>
